@@ -12,14 +12,17 @@ def index1(request):
 
 def plot_view(request):
     # 數據
-    x = [1, 2, 3, 4, 5]
-    y = [2, 4, 6, 8, 10]
-
+    x = [0,0.5, 1, 1.5, 2, 2.5,3]
+    y = [0,0.5, 1, 1.5, 2, 2.5,3]
+    plt.figure(edgecolor='black')
+    plt.axes(facecolor='lightblue')
     # 建立圖表
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
     plt.title('Plot')
+    
+    # plt.figure(figsize=(8, 6))
 
     # 將圖表轉成圖像
     buffer = io.BytesIO()
